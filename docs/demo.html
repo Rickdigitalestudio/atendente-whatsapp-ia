@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo — Atendente WhatsApp IA | Diego Sales</title>
+<style>body{font-family:Arial;background:#0b141a;color:#fff;margin:0}header{background:#075e54;padding:12px}main{max-width:560px;margin:0 auto;padding:12px}#chat{background:#111b21;border-radius:10px;padding:12px;min-height:300px;display:flex;flex-direction:column;gap:8px}.eu{align-self:flex-end;background:#005c4b;padding:8px 12px;border-radius:10px;max-width:80%}.bot{align-self:flex-start;background:#202c33;padding:8px 12px;border-radius:10px;max-width:85%;white-space:pre-wrap}form{display:flex;gap:8px;margin-top:10px}input{flex:1;padding:10px;border-radius:8px;border:0}button{background:#00a884;border:0;color:#fff;padding:10px 16px;border-radius:8px;cursor:pointer}.dicas{font-size:13px;opacity:.8;margin-top:8px}.aviso{font-size:12px;opacity:.7;margin-top:10px}a{color:#7ee2b8}</style></head>
+<body><header><b>💬 Demo — Atendente WhatsApp IA (Diego Sales)</b><br><small>Demonstração pública do case — o projeto real conecta no WhatsApp via QR Code. <a href="https://github.com/Ricklima991/atendente-whatsapp-ia">Ver código</a></small></header>
+<main><div id="chat"></div>
+<form id="f"><input id="i" placeholder="Ex: Quanto custa o plano familiar?" autocomplete="off"><button>Enviar</button></form>
+<div class="dicas">Teste: "oi" • "qual horário?" • "sou MEI" • "palestra" • "quero agendar" • "humano"</div>
+<div class="aviso">Site: consultoriadeplano.com.br · Horários: Seg/Ter/Qui 9h–19h30, Qua 9h–18h, Sex 9h–17h</div></main>
+<script>
+const BOAS = "Olá! 👋 Aqui é do *Diego Sales* — Planos de Saúde + Palestras Motivacionais.\nPosso te ajudar com:\n1️⃣ Cotação de plano\n2️⃣ Palestra/evento\n3️⃣ Agendar uma conversa\nÉ só me dizer o que precisa!";
+const HOR = "Nosso horário: Seg, Ter e Qui das 9h às 19h30, Qua das 9h às 18h, Sex das 9h às 17h. Sáb e Dom fechado.\nQuer que eu já deixe uma reunião agendada?";
+const PRECO = "Valores de referência (a cotação exata depende de idade/cidade/operadora):\n• *Individual / Familiar*: a partir de R$ 199/mês\n• *Empresarial / CNPJ / MEI*: a partir de R$ 159/mês por vida\n• *Adesão*: a partir de R$ 179/mês\n\nMe passa: sua idade, cidade e se é individual, familiar ou CNPJ/MEI? 📋";
+const PAL = "Palestras (presencial ou online, 60 a 90 min + perguntas):\nTemas: Vendas com Propósito, Motivação que Vende, Atendimento que Encanta, Saúde e Alta Performance.\nValor sob consulta — me diz cidade, data e público que monto a proposta em 24h. 🎤";
+function brain(t){
+  t = t.toLowerCase();
+  if(/palestra|evento|sipat|treinamento|motiva/.test(t)) return PAL;
+  if(/hor[aá]rio|abre|fecha|funciona|atende/.test(t)) return HOR;
+  if(/pre[cç]o|valor|quanto|tabela|cota|plano|mensalidade|ades[aã]o|empresarial|cnpj|mei/.test(t)) return PRECO;
+  if(/agend|marc|reuni|visita|conversa|reserv|disponib/.test(t)) return "Perfeito, vamos agendar! 📅\nNo projeto real isso cai no Google Calendar. Me manda: *nome + dia/horário + plano ou palestra*?";
+  if(/humano|atendente|pessoa|reclama|cancela/.test(t)) return "Claro, vou te transferir para o especialista. 🙋\nMe deixa seu nome e telefone que já priorizo.";
+  if(/urg[eê]ncia|emerg[eê]ncia|dor forte|samu/.test(t)) return "Não sou pronto-socorro. Em urgência ligue 192 (SAMU).";
+  if(/^(oi|ol[aá]|bom dia|boa tarde|boa noite|tudo bem)/.test(t)) return BOAS;
+  if(/obrigad|valeu|tchau|at[eé] mais/.test(t)) return "Foi um prazer! Qualquer coisa é só chamar. Sucesso! 🚀";
+  return "Sou o atendente do Diego Sales. Posso ajudar com:\n1️⃣ Horário de atendimento\n2️⃣ Preço/cotação de planos\n3️⃣ Palestras\n4️⃣ Agendar reunião\nÉ só me dizer o que precisa!";
+}
+const chat = document.getElementById('chat'), f = document.getElementById('f'), i = document.getElementById('i');
+function add(cls, txt){ const d = document.createElement('div'); d.className = cls; d.innerText = txt; chat.appendChild(d); chat.scrollTop = 1e6; }
+add('bot', BOAS);
+f.onsubmit = e => { e.preventDefault(); const t = i.value.trim(); if(!t) return; i.value=''; add('eu', t); setTimeout(()=>add('bot', brain(t)), 400); };
+</script>
+</body></html>

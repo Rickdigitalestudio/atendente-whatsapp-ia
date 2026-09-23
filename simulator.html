@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulador — Atendente WhatsApp IA</title>
+<style>body{font-family:Arial;background:#0b141a;color:#fff;margin:0}header{background:#075e54;padding:12px}main{max-width:560px;margin:0 auto;padding:12px}#chat{background:#111b21;border-radius:10px;padding:12px;min-height:300px;display:flex;flex-direction:column;gap:8px}.eu{align-self:flex-end;background:#005c4b;padding:8px 12px;border-radius:10px;max-width:80%}.bot{align-self:flex-start;background:#202c33;padding:8px 12px;border-radius:10px;max-width:85%;white-space:pre-wrap}form{display:flex;gap:8px;margin-top:10px}input{flex:1;padding:10px;border-radius:8px;border:0}button{background:#00a884;border:0;color:#fff;padding:10px 16px;border-radius:8px;cursor:pointer}.dicas{font-size:13px;opacity:.8;margin-top:8px}</style></head>
+<body><header><b>💬 Simulador do Atendente (sem WhatsApp)</b><br><small>Teste aqui antes de conectar o número real</small></header>
+<main><div id="chat"><div class="bot">Olá! Aqui é da equipe de Planos de Saúde + Palestras 👋&#10;Posso te ajudar com *planos*, *palestras*, *horário* ou *agendamento*?</div></div>
+<form id="f"><input id="i" placeholder="Digite como se fosse no WhatsApp... Ex: Quanto custa o plano familiar?" autocomplete="off"><button>Enviar</button></form>
+<div class="dicas">Teste: "qual horário?" • "sou MEI" • "palestra" • "Ana, amanhã 15h, cotação" • "humano"</div></main>
+<script>const chat=document.getElementById('chat'),f=document.getElementById('f'),i=document.getElementById('i');
+f.onsubmit=async e=>{e.preventDefault();const t=i.value.trim();if(!t)return;i.value='';chat.innerHTML+=`<div class="eu">${t}</div>`;chat.scrollTop=1e6;
+try{const r=await fetch('/api/simular',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mensagem:t})});const j=await r.json();chat.innerHTML+=`<div class="bot">${(j.resposta||j.erro||'erro').replace(/\n/g,'<br>')}<br><small style="opacity:.6">[${j.motor||''} • ${j.intencao||''}]</small></div>`;}catch(_){chat.innerHTML+=`<div class="bot">Rode o servidor: python -m app.main</div>`;}chat.scrollTop=1e6;};</script>
+</body></html>

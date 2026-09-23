@@ -1,0 +1,8 @@
+flask>=3.0
+requests>=2.31
+# IA (opcional — sem elas o bot funciona em modo regras, grátis):
+openai>=1.30
+google-generativeai>=0.5
+# Google Calendar (opcional — sem credentials.json usa arquivo local):
+google-api-python-client>=2.0
+google-auth>=2.0

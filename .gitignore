@@ -1,0 +1,11 @@
+# Segredos e arquivos locais — NUNCA subir no GitHub
+.env
+credentials.json
+token.pickle
+agenda.json
+qrcode.png
+*.png
+__pycache__/
+.venv/
+*.log
+logs/

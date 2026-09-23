@@ -1,0 +1,63 @@
+{
+  "negocio": {
+    "nome": "Diego Sales",
+    "titulo": "Coordenador Comercial de Planos de Saúde | Palestrante Motivacional Premium",
+    "whatsapp_comercial": "55219XXXXXXX",
+    "email": "diegoconsultordeplano@gmail.com",
+    "site": "https://consultoriadeplano.com.br/",
+    "instagram": ""
+  },
+  "persona": "coordenador_comercial_planos_e_palestrante",
+  "horarios": {
+    "segunda": "09:00 às 19:30",
+    "terca": "09:00 às 19:30",
+    "quarta": "09:00 às 18:00",
+    "quinta": "09:00 às 19:30",
+    "sexta": "09:00 às 17:00",
+    "sabado": "fechado",
+    "domingo": "fechado",
+    "texto_resumo": "Seg, Ter e Qui das 9h às 19h30, Qua das 9h às 18h, Sex das 9h às 17h. Sáb e Dom fechado. Fora desse horário deixo tudo registrado e o Diego te chama no próximo horário comercial."
+  },
+  "boas_vindas": "Olá! 👋 Aqui é do *Diego Sales* — Planos de Saúde + Palestras Motivacionais.\nPosso te ajudar com:\n1️⃣ Cotação de plano\n2️⃣ Palestra/evento\n3️⃣ Agendar uma conversa\nÉ só me dizer o que precisa! (Site: https://consultoriadeplano.com.br/)",
+  "planos": [
+    {
+      "nome": "Individual / Familiar",
+      "descricao": "Para você e sua família, com rede nacional e urgência 24h",
+      "preco_referencia": "a partir de R$ 199/mês (varia por idade, operadora e cobertura)",
+      "observacao": "Cotação exata após idade + cidade + operadora de preferência"
+    },
+    {
+      "nome": "Empresarial / CNPJ / MEI",
+      "descricao": "Para empresas a partir de 2 vidas, com desconto progressivo",
+      "preco_referencia": "a partir de R$ 159/mês por vida",
+      "observacao": "CNPJ e MEI têm condições especiais"
+    },
+    {
+      "nome": "Adesão (por profissão/entidade)",
+      "descricao": "Para profissionais liberais vinculados a entidades de classe",
+      "preco_referencia": "a partir de R$ 179/mês",
+      "observacao": "Exige comprovação de vínculo com a entidade"
+    }
+  ],
+  "palestras": {
+    "temas": [
+      "Vendas com Propósito",
+      "Motivação que Vende",
+      "Atendimento que Encanta",
+      "Saúde e Alta Performance"
+    ],
+    "duracao": "60 a 90 min + perguntas",
+    "formato": "presencial ou online",
+    "preco_referencia": "sob consulta (varia por cidade, público e formato). Chama que monto proposta em 24h.",
+    "agenda_proxima": "consulte disponibilidade no Google Calendar"
+  },
+  "regras": {
+    "duracao_padrao_reuniao_min": 30,
+    "antecedencia_minima_horas": 2,
+    "horario_agendavel": "seg/ter/qui 09:00-19:30, qua 09:00-18:00, sex 09:00-17:00 (sab/dom fechado)",
+    "mensagem_fora_horario": "Estamos fora do horário comercial agora (Seg/Ter/Qui 9h-19h30, Qua 9h-18h, Sex 9h-17h), mas já registrei seu contato. O Diego te retorna no próximo horário comercial, ok?",
+    "chamar_humano_em": ["reclamação", "cancelar", "urgência médica", "quero falar com humano", "atendente"],
+    "aviso_lgpd": "Seus dados são usados só para cotação/agendamento. Não compartilhamos com terceiros.",
+    "disclaimer_saude": "Não sou pronto-socorro. Em urgência médica ligue 192 (SAMU) ou vá à emergência mais próxima."
+  }
+}
