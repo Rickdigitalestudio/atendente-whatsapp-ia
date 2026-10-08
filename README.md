@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-blue) ![Flask](https://img.shields.io/badge/Flask-3-green) ![WhatsApp](https://img.shields.io/badge/WhatsApp-Evolution_API-25D366) ![License](https://img.shields.io/badge/License-MIT-gray)
 
 > **Case real:** bot conectado ao número comercial de Diego Sales (Coordenador Comercial de Planos de Saúde + Palestrante Premium) — boas-vindas, horário, preço, palestras e agenda no Google Calendar.
-> 📖 **[Ler o case](docs/CASE_DIEGO.md)** · 🧠 **[Arquitetura](docs/ARQUITETURA.md)** · 💬 **Demo online:** https://Ricklima991.github.io/atendente-whatsapp-ia/demo.html (após ativar o Pages) — o cérebro do bot clicável no navegador, sem instalar nada.
+> 📖 **[Ler o case](docs/CASE_DIEGO.md)** · 🧠 **[Arquitetura](docs/ARQUITETURA.md)** · 💬 **Demo online:** https://rickdigitalestudio.github.io/atendente-whatsapp-ia/demo.html (após ativar o Pages) — o cérebro do bot clicável no navegador, sem instalar nada.
 
 Projeto REAL e completo. Conecta o **número real do cliente via QR Code** (Evolution API),
 responde **horário, preço e agenda**, integra **Google Calendar**, funciona **sem chave de IA**

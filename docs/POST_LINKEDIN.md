@@ -30,8 +30,8 @@ A lição que fica: automação boa não substitui o humano — tira o trabalho 
 ## Primeiro comentário (cole 5 min após postar)
 
 Como prometido 👇
-💬 Demo online (testa o bot no navegador): https://Ricklima991.github.io/atendente-whatsapp-ia/demo.html
-💻 Código + case completo: https://github.com/Ricklima991/atendente-whatsapp-ia
+💬 Demo online (testa o bot no navegador): https://rickdigitalestudio.github.io/atendente-whatsapp-ia/demo.html
+💻 Código + case completo: https://github.com/Rickdigitalestudio/atendente-whatsapp-ia
 
 ## Checklist antes de postar
 - [ ] Trocar SEU_USUARIO pelos links reais (demo + repo)
